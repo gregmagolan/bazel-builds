@@ -9,8 +9,8 @@
     "typescript": ">=2.4.2 <2.6"
   },
   "dependencies": {
-    "@bazel/typescript": "0.3.x",
-    "@types/node": "6.0.84"
+    "@bazel/typescript": "git+https://github.com/gregmagolan/rules_typescript.git#devserver-4",
+    "@types/node": "8.0.53"
   },
   "repository": {
     "type": "git",
