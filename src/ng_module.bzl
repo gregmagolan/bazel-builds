@@ -185,8 +185,8 @@ def ngc_compile_action(ctx, label, inputs, outputs, messages_out, tsconfig_file,
   return None
 
 def _compile_action(ctx, inputs, outputs, messages_out, tsconfig_file):
-  # Give the Angular compiler all the user-listed assets
-  file_inputs = list(ctx.files.assets)
+  # Give the Angular compiler all the user-listed assets & typings
+  file_inputs = ctx.files.assets + ctx.files.typings
 
   # The compiler only needs to see TypeScript sources from the npm dependencies,
   # but may need to look at package.json and ngsummary.json files as well.
